@@ -1,5 +1,7 @@
 import Stripe from "stripe";
-import { version } from "../../package.json";
+import versionFile  from "../../package.json";
+
+const { version } = versionFile;
 
 export const stripe = new Stripe(process.env.STRIPE_API_KEY, {
   apiVersion: "2020-08-27",
